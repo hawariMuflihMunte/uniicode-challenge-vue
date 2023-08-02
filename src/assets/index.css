@@ -67,7 +67,7 @@
 
 @keyframes blink-hexagon-variant-1 {
   to {
-    transform: scale(1.01) translateY(2px);
+    transform: scale(1.01) translateY(10px);
   }
 }
 
