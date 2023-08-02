@@ -2,27 +2,26 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Icon from '@/components/Icon.vue'
 import UniicodeLogoVue from '@/components/UniicodeLogo.vue'
-import UniicodeButton from '@/components/UniicodeButton.vue';
+import UniicodeButton from '@/components/UniicodeButton.vue'
+import UniicodeAnchor from '@/components/UniicodeAnchor.vue'
+import UniicodeRouterLink from '@/components/UniicodeRouterLink.vue'
 </script>
 
 <template>
   <div class="app-container bg-uniicode-black text-uniicode-green">
-    <header>
+    <header class="mb-12">
       <nav class="flex flex-col place-content-center place-items-center">
         <UniicodeLogoVue />
-        <UniicodeButton>
-          <Icon icon="home" />
-        </UniicodeButton>
         <ul class="list-none flex justify-between">
           <li>
-            <RouterLink to="/" class="flex place-content-center place-items-center min-w-[30px] min-h-[30px] p-2 m-2 border-t-4 border-t-uniicode-green">
+            <UniicodeRouterLink :link="`/`">
               <Icon icon="home" />
-            </RouterLink>
+            </UniicodeRouterLink>
           </li>
           <li>
-            <RouterLink to="/about">
+            <UniicodeRouterLink :link="`/about`">
               <Icon icon="help" />
-            </RouterLink>
+            </UniicodeRouterLink>
           </li>
         </ul>
       </nav>
