@@ -1,3 +1,4 @@
+import 'material-symbols/sharp.css'
 import './assets/index.css'
 
 import { createApp } from 'vue'
