@@ -44,7 +44,7 @@ const isWebpSupported = supportsWebp();
     transform: scale(1);
   }
   100% {
-    transform: scale(1.085);
+    transform: scale(1.1);
   }
 }
 </style>
