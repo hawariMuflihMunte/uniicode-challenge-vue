@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import Icon from '@/components/Icon.vue'
 import UniicodeLogoVue from '@/components/UniicodeLogo.vue'
-import UniicodeButton from '@/components/UniicodeButton.vue'
-import UniicodeAnchor from '@/components/UniicodeAnchor.vue'
 import UniicodeRouterLink from '@/components/UniicodeRouterLink.vue'
 </script>
 
@@ -38,7 +36,9 @@ import UniicodeRouterLink from '@/components/UniicodeRouterLink.vue'
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  min-width: 100vw;
+  min-width: 80vw;
+  max-width: 100%;
   min-height: 100vh;
+  overflow: hidden;
 }
 </style>
