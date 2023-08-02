@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
+import IconVue from './components/Icon.vue';
 </script>
 
 <template>
@@ -8,8 +9,8 @@ import { RouterLink, RouterView } from 'vue-router'
       <HelloWorld msg="You did it!" />
 
       <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/"><IconVue icon="home" /></RouterLink>
+        <RouterLink to="/about"><IconVue icon="help" /></RouterLink>
       </nav>
     </div>
   </header>
