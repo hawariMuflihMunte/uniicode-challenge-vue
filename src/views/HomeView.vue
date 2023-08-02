@@ -1,11 +1,44 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 
+const welcomeMessageStatus = ref(true)
+const toggleWelcomeMessageStatus = () => {
+  welcomeMessageStatus.value = false
+}
+
+const xAxisAnim = ref(0)
+const yAxisAnim = ref(0)
+
+const changeColorBasedOnXAxisAnim = (e: MouseEvent) => {
+  xAxisAnim.value = e.clientX
+}
+
+const changeColorBasedOnYAxisAnim = (e: MouseEvent) => {
+  yAxisAnim.value = e.clientY
+}
+
+const changeColorBasedOnXY = (e: MouseEvent) => {
+  changeColorBasedOnXAxisAnim(e)
+  changeColorBasedOnYAxisAnim(e)
+}
 </script>
 
 <template>
-  <main class="bg-slate-900">
-    <section>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt nemo eum, laudantium autem saepe sit expedita. Vero architecto blanditiis magnam porro quasi vel fuga, deleniti veritatis nesciunt provident nobis quo voluptates dolore sed necessitatibus fugit soluta cum sunt ratione, saepe modi officiis iure? Nemo ullam unde reprehenderit voluptatibus corporis tempore architecto, quod animi. In ipsam veniam perferendis deleniti voluptatum magni eaque ratione fugit a rerum, molestiae, vel ab culpa dolorum illo laboriosam ipsa laborum. Voluptatum, delectus iusto! Nisi fugiat asperiores tempore inventore provident consequatur magnam officia, dolorem voluptate officiis obcaecati, dignissimos quae amet dolore esse. Maxime repellat aliquid accusantium.</p>
-    </section>
-  </main>
+  <section
+    @mousemove="changeColorBasedOnXY"
+    :style="{ backgroundColor: `hsla(${xAxisAnim}, 60%, 30%, ${yAxisAnim / yAxisAnim})` }"
+    >
+    <template v-if="welcomeMessageStatus">
+      <h1
+        @click="toggleWelcomeMessageStatus"
+        class="text-4xl text-center text-slate-300">UNIICODE
+      </h1>
+    </template>
+  </section>
 </template>
+
+<style scoped>
+.changecolor {
+  transition: 0.3s background-color ease;
+}
+</style>
