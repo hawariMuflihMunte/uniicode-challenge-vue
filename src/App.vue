@@ -1,83 +1,43 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import IconVue from './components/Icon.vue';
+import Icon from '@/components/Icon.vue'
+import UniicodeLogoVue from '@/components/UniicodeLogo.vue'
+import UniicodeButton from '@/components/UniicodeButton.vue';
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/"><IconVue icon="home" /></RouterLink>
-        <RouterLink to="/about"><IconVue icon="help" /></RouterLink>
+  <div class="app-container bg-uniicode-black text-uniicode-green">
+    <header>
+      <nav class="flex flex-col place-content-center place-items-center">
+        <UniicodeLogoVue />
+        <UniicodeButton>
+          <Icon icon="home" />
+        </UniicodeButton>
+        <ul class="list-none flex justify-between">
+          <li>
+            <RouterLink to="/" class="flex place-content-center place-items-center min-w-[30px] min-h-[30px] p-2 m-2 border-t-4 border-t-uniicode-green">
+              <Icon icon="home" />
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/about">
+              <Icon icon="help" />
+            </RouterLink>
+          </li>
+        </ul>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.app-container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 </style>
