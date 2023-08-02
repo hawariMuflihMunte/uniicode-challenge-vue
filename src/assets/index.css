@@ -27,12 +27,15 @@
   @apply p-3;
   @apply bg-uniicode-black;
   @apply text-slate-200;
-  @apply transition-colors;
   @apply duration-700;
+
+  box-shadow: 0 0 8px white;
+  animation: blink-hexagon-variant-1 1000ms alternate infinite paused both;
 }
 
 .button-uniicode:hover {
   @apply bg-uniicode-dark;
+  animation-play-state: running;
 }
 
 .button-uniicode::before {
@@ -50,16 +53,21 @@
 }
 
 .button-uniicode:hover::before {
-  animation: spin-hexagon-variant-1 900ms linear 1 forwards;
+  animation: spin-hexagon-variant-1 300ms linear 1 both;
 }
 
 @keyframes spin-hexagon-variant-1 {
-  0% {
-    transform: rotateZ(30deg);
-  }
   100% {
+    --tw-border-opacity: 1;
+    filter: drop-shadow(0 0 10px rgb(184 250 0 / var(--tw-border-opacity)));
     transform: rotateZ(150deg);
     animation-play-state: paused;
+  }
+}
+
+@keyframes blink-hexagon-variant-1 {
+  to {
+    transform: scale(1.01) translateY(2px);
   }
 }
 
