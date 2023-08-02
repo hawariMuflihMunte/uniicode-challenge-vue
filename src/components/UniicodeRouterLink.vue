@@ -10,7 +10,7 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink :to="link">
+  <RouterLink :to="link" class="button-uniicode">
     <slot></slot>
   </RouterLink>
 </template>
