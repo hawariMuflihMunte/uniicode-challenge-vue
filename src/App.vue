@@ -40,5 +40,7 @@ import UniicodeRouterLink from '@/components/UniicodeRouterLink.vue'
   max-width: 100%;
   min-height: 100vh;
   overflow: hidden;
+
+  @apply pb-20;
 }
 </style>
