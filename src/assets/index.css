@@ -33,7 +33,8 @@
   animation: blink-hexagon-variant-1 1000ms alternate infinite paused both;
 }
 
-.button-uniicode:hover {
+.button-uniicode:hover,
+.button-uniicode:focus {
   @apply bg-uniicode-dark;
   animation-play-state: running;
 }
@@ -52,7 +53,8 @@
   @apply transition-all;
 }
 
-.button-uniicode:hover::before {
+.button-uniicode:hover::before,
+.button-uniicode:focus::before {
   animation: spin-hexagon-variant-1 300ms linear 1 both;
 }
 
