@@ -140,17 +140,17 @@ const props = defineProps({
   strength: {
     type: Array as () => string[],
     required: false,
-    default: 'None 😔'
+    default: ['None 😔']
   },
   weakness: {
     type: Array as () => string[],
     required: false,
-    default: 'None 😔'
+    default: ['None 😔']
   },
   techStack: {
     type: Array as () => string[],
     required: false,
-    default: 'None 😔'
+    default: ['None 😔']
   }
 })
 
@@ -212,7 +212,9 @@ defineExpose({
           <summary>Weakness 👀</summary>
 
           <ul>
-            <li>None 😔</li>
+            <li v-for="weak in weakness" :key="weak">
+              {{ weak }}
+            </li>
           </ul>
         </details>
       </p>
