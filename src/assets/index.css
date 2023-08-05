@@ -6,6 +6,7 @@
 @tailwind utilities;
 
 details {
+  cursor: pointer;
   transition: all 1000ms ease;
   max-height: 0%;
 }
