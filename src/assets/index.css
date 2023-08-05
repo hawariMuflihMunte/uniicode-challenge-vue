@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+details {
+  transition: all 1000ms ease;
+  max-height: 0%;
+}
+
+details[open] {
+  max-height: 100%;
+}
+
 /* material-symbols config */
 .material-symbols-sharp {
   font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 200, 'opsz' 48;
@@ -98,13 +107,21 @@
 }
 
 .profile-details-uniicode {
-  @apply bg-uniicode-dark;
+  @apply bg-transparent;
   @apply p-3;
 
   opacity: 0;
   min-width: 80%;
   z-index: 10;
-  filter: drop-shadow(0 3px 3px #B8FA00);
+  filter: drop-shadow(0 1px 12px #B8FA00);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile-details-uniicode__name {
+  font-weight: 700;
+  letter-spacing: 2px;
 }
 
 .profile-image-uniicode img {
