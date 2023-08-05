@@ -25,7 +25,7 @@ import UniicodeRouterLink from '@/components/UniicodeRouterLink.vue'
       </nav>
     </header>
 
-    <main class="mx-auto px-12">
+    <main class="mx-auto px-12 py-8">
       <RouterView />
     </main>
   </div>
