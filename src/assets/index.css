@@ -1,3 +1,5 @@
+@import url(./hint.css);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -117,6 +119,13 @@ details[open] {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+.profile-details-uniicode *::selection {
+  @apply text-uniicode-dark;
+
+  background: #B8FA00;
+  border-radius: 8px;
 }
 
 .profile-details-uniicode__name {
