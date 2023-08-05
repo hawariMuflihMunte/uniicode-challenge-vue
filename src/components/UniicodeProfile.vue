@@ -210,7 +210,11 @@ defineExpose({
           <summary>Tech 😎</summary>
           <ul>
             <li v-for="techName in techStack" :key="techName">
-              <img :src="getTechInfo(techName)" :alt="techName">
+              <img
+                :src="getTechInfo(techName)"
+                :alt="techName"
+                class="max-w-[40px]"
+              />
             </li>
           </ul>
         </details>
