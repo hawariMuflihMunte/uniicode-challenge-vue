@@ -99,7 +99,7 @@
 
 .profile-details-uniicode {
   @apply bg-uniicode-dark;
-  @apply p-2;
+  @apply p-3;
 
   opacity: 0;
   min-width: 80%;
@@ -123,10 +123,25 @@
   animation: profile-slide-left 300ms ease-in 0s 1 alternate both;
 }
 
+.profile-slide-right {
+  animation: profile-slide-right 300ms ease-in 0s 1 alternate both;
+}
+
 @keyframes profile-slide-left {
 	0% {
 		opacity: 0;
 		transform: translateX(-250px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes profile-slide-right {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
 	}
 	100% {
 		opacity: 1;
