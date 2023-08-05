@@ -202,8 +202,9 @@ defineExpose({
           <summary>Strength 💪🏼</summary>
 
           <ul>
-            <li><code>UNIICODE Adomin $ sudo</code></li>
-            <li><code>npm i express</code></li>
+            <li v-for="ability in strength" :key="ability">
+              {{ ability }}
+            </li>
           </ul>
         </details>
       </p>
