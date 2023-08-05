@@ -181,4 +181,36 @@ details[open] {
 	}
 }
 
+.profile-fade-right {
+  animation: profile-fade-right 600ms ease-out 0s 1 alternate both;
+}
+
+.profile-fade-left {
+  animation: profile-fade-left 600ms ease-out 0s 1 alternate both;
+}
+
+@keyframes profile-fade-right {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+}
+
+@keyframes profile-fade-left {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+}
+
 /* end */

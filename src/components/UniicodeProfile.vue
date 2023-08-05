@@ -156,20 +156,18 @@ const props = defineProps({
 
 const profileDetailsUniicode = ref<HTMLElement|null>(null)
 
-const slideInProfileDetails = (): boolean => {
+const slideInProfileDetails = (): void => {
   const elem = profileDetailsUniicode.value
 
   elem?.classList.add(`profile-slide-${props.slidePosition}`)
-
-  return true
+  elem?.classList.remove(`profile-fade-right`)
 }
 
-const slideOutProfileDetails = (): boolean => {
+const slideOutProfileDetails = (): void => {
   const elem = profileDetailsUniicode.value
 
   elem?.classList.remove(`profile-slide-${props.slidePosition}`)
-
-  return false
+  elem?.classList.add(`profile-fade-right`)
 }
 
 defineExpose({
