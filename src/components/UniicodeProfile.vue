@@ -137,9 +137,20 @@ const props = defineProps({
     type: String,
     default: 'right'
   },
+  strength: {
+    type: Array as () => string[],
+    required: false,
+    default: 'None 😔'
+  },
+  weakness: {
+    type: Array as () => string[],
+    required: false,
+    default: 'None 😔'
+  },
   techStack: {
     type: Array as () => string[],
-    required: false
+    required: false,
+    default: 'None 😔'
   }
 })
 
