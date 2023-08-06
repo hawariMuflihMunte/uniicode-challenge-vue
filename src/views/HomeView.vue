@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import UniicodeProfile from '@/components/UniicodeProfile.vue'
+import UniicodeFooter from '@/components/UniicodeFooter.vue'
 import galihImg from '@/assets/images/person/galih.jpg'
 import hawariImg from '@/assets/images/person/hawari.jpg'
 import cakAdiImg from '@/assets/images/person/cakAdi.jpg'
 import rezaImg from '@/assets/images/person/reza.jpg'
 import avisImg from '@/assets/images/person/avis.jpg'
 import dimasImg from '@/assets/images/person/dimas.jpg'
-import UniicodeFooter from '@/components/UniicodeFooter.vue'
+import iqbalAMImg from '@/assets/images/person/iqbalAM.jpg'
 
 const personStats = [
   {
@@ -114,6 +115,26 @@ const personStats = [
       'css',
       'javascript',
       'go',
+    ]
+  },
+  {
+    name: 'Iqbal Arie Maulana',
+    image: iqbalAMImg,
+    strength: [
+      'UNIICODE Sepoeh 🙏🏼',
+    ],
+    weakness: [
+      'Unknown 👀'
+    ],
+    techStack: [
+      'html',
+      'css',
+      'javascript',
+      'react',
+      'vue',
+      'php',
+      'python',
+      'tailwindcss',
     ]
   },
 ]
