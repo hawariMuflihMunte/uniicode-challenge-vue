@@ -220,12 +220,11 @@ defineExpose({
       <p class="profile-details-uniicode__tech">
         <details>
           <summary>Tech 😎</summary>
-          <ul class="flex gap-5 pt-2">
+          <ul>
             <li v-for="techName in techStack" :key="techName">
               <img
                 :src="getTechInfo(techName)"
                 :alt="techName"
-                class="max-w-[40px]"
               />
             </li>
           </ul>
