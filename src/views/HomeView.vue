@@ -3,6 +3,7 @@ import UniicodeProfile from '@/components/UniicodeProfile.vue'
 import galihImg from '@/assets/images/person/galih.jpg'
 import hawariImg from '@/assets/images/person/hawari.jpg'
 import cakAdiImg from '@/assets/images/person/cakAdi.jpg'
+import rezaImg from '@/assets/images/person/reza.jpg'
 
 const personStats = [
   {
@@ -66,6 +67,19 @@ const personStats = [
       'bootstrap',
       'sass',
       'tailwindcss'
+    ]
+  },
+  {
+    name: 'Reza',
+    image: rezaImg,
+    strength: [
+      'UNIICODE Sepoeh 🙏🏼',
+    ],
+    weakness: [
+      'Unknown 👀'
+    ],
+    techStack: [
+      'go'
     ]
   },
 ]
