@@ -142,6 +142,17 @@ details summary {
   letter-spacing: 2px;
 }
 
+.profile-details-uniicode__tech ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0.5rem;
+  gap: 1.25rem;
+}
+
+.profile-details-uniicode__tech img {
+  max-width: 40px;
+}
+
 .profile-image-uniicode img {
   -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
