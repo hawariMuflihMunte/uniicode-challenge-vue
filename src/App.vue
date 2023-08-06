@@ -13,7 +13,7 @@ import UniicodeRouterLink from '@/components/UniicodeRouterLink.vue'
         <ul class="list-none flex justify-between">
           <li>
             <UniicodeRouterLink :link="`/`">
-              <Icon icon="home" />
+              <Icon icon="group" />
             </UniicodeRouterLink>
           </li>
           <li>
