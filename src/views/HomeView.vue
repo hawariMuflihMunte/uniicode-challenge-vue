@@ -54,10 +54,9 @@ const personStats = [
     image: cakAdiImg,
     strength: [
       'UNIICODE Sepoeh 🙏🏼',
-      '!mockable_php'
     ],
     weakness: [
-      'None, sepoerane 🙏🏼'
+      'Unknown 👀'
     ],
     techStack: [
       'html',
