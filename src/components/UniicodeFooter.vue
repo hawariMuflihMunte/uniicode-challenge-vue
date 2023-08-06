@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <footer class="flex flex-wrap gap-9 justify-center py-2 px-4">
+  <footer class="flex flex-wrap gap-9 justify-center pt-20 pb-2 px-4">
     <span>ユニーコード</span>
     <span>ゆにこおど</span>
     <span class="center">UNIICODE</span>
