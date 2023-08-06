@@ -5,6 +5,7 @@ import hawariImg from '@/assets/images/person/hawari.jpg'
 import cakAdiImg from '@/assets/images/person/cakAdi.jpg'
 import rezaImg from '@/assets/images/person/reza.jpg'
 import avisImg from '@/assets/images/person/avis.jpg'
+import dimasImg from '@/assets/images/person/dimas.jpg'
 
 const personStats = [
   {
@@ -97,6 +98,22 @@ const personStats = [
       'css',
       'javascript',
       'php'
+    ]
+  },
+  {
+    name: 'Dimas',
+    image: dimasImg,
+    strength: [
+      'UNIICODE Member',
+    ],
+    weakness: [
+      'Unknown 👀'
+    ],
+    techStack: [
+      'html',
+      'css',
+      'javascript',
+      'go',
     ]
   },
 ]
