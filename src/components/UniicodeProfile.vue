@@ -131,7 +131,7 @@ const props = defineProps({
   },
   image: {
     type: String,
-    required: false
+    required: true
   },
   slidePosition: {
     type: String,
