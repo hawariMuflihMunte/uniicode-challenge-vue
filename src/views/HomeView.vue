@@ -6,6 +6,7 @@ import cakAdiImg from '@/assets/images/person/cakAdi.jpg'
 import rezaImg from '@/assets/images/person/reza.jpg'
 import avisImg from '@/assets/images/person/avis.jpg'
 import dimasImg from '@/assets/images/person/dimas.jpg'
+import UniicodeFooter from '@/components/UniicodeFooter.vue'
 
 const personStats = [
   {
@@ -122,7 +123,7 @@ const personStats = [
 
 <template>
   <section>
-    <h1 class="text-4xl text-center text-slate-300">ユニーコード</h1>
+    <h1 class="text-4xl text-center text-slate-300">UNIICODE</h1>
     <section class="container py-10">
       <template v-for="person in personStats" :key="person">
         <UniicodeProfile
@@ -135,6 +136,7 @@ const personStats = [
       </template>
     </section>
   </section>
+  <UniicodeFooter />
 </template>
 
 <style scoped>
