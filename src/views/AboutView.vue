@@ -33,6 +33,12 @@ import Icon from '@/components/Icon.vue'
 .about {
   margin-left: auto;
   margin-right: auto;
-  max-width: 96%;
+  max-width: 75%;
+}
+
+@media screen and (max-width: 576px) {
+  .about {
+    max-width: 98%;
+  }
 }
 </style>
