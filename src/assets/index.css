@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+p,
+ol,
+ul {
+  letter-spacing: 1px;
+  max-width: 66ch;
+  line-height: 2;
+}
+
 details {
   transition: all 1000ms ease;
   max-height: 0%;
