@@ -15,8 +15,10 @@ const personStats = [
       'For now, none'
     ],
     techStack: [
+      'vim',
       'javascript',
       'react',
+      'vue',
       'express',
       'cpp',
       'go'
