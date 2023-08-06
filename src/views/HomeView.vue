@@ -54,9 +54,16 @@ const personStats = [
       'None, sepoerane 🙏🏼'
     ],
     techStack: [
+      'html',
+      'css',
+      'php',
       'javascript',
+      'typescript',
       'react',
-      'express'
+      'vue',
+      'bootstrap',
+      'sass',
+      'tailwindcss'
     ]
   },
 ]
