@@ -140,6 +140,12 @@ details summary {
   gap: 12px;
 }
 
+@media screen and (max-width: 576px) {
+  .profile-details-uniicode {
+    @apply pl-8
+  }
+}
+
 .profile-details-uniicode *::selection {
   @apply text-uniicode-dark;
 
