@@ -156,40 +156,38 @@ const props = defineProps({
 
 const profileDetailsUniicode = ref<HTMLElement|null>(null)
 
-const slideInProfileDetails = (): void => {
-  const elem = profileDetailsUniicode.value
+const isProfileDetailsOpened = ref<boolean>(false)
+let lastClickTime = 0;
 
-  elem?.classList.add(`profile-slide-${props.slidePosition}`)
-  elem?.classList.remove(`profile-fade-right`)
+const showProfileDetails = (): void => {
+  const currentTime = new Date().getTime()
+
+  if (currentTime - lastClickTime < 300) {
+    isProfileDetailsOpened.value = !isProfileDetailsOpened.value
+
+    const elem = profileDetailsUniicode.value
+
+    isProfileDetailsOpened.value
+    ? elem?.classList.add(`profile-slide-${props.slidePosition}`)
+    : elem?.classList.remove(`profile-slide-${props.slidePosition}`)
+  } else {
+    lastClickTime = currentTime
+  }
 }
-
-const slideOutProfileDetails = (): void => {
-  const elem = profileDetailsUniicode.value
-
-  elem?.classList.remove(`profile-slide-${props.slidePosition}`)
-  elem?.classList.add(`profile-fade-right`)
-}
-
-defineExpose({
-  slideInProfileDetails,
-  slideOutProfileDetails
-})
 </script>
 
 <template>
   <article class="profile-uniicode source-code-pro">
     <section
       class="profile-image-uniicode"
-      @click="slideOutProfileDetails"
-      @dblclick="slideInProfileDetails"
+      @click="showProfileDetails"
       title="Double click to view details. Click once to close details"
     >
       <span class="hint--bottom hint--no-arrow" :aria-label="name">
         <img
           :src="image"
           :alt="`${name} image`"
-          @click="slideOutProfileDetails"
-          @dblclick="slideInProfileDetails"
+          @click="showProfileDetails"
         />
       </span>
     </section>
