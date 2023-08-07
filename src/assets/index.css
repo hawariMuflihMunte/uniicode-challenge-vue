@@ -108,8 +108,7 @@ details summary {
   max-width: 20%;
   z-index: 20;
   margin-bottom: 50px;
-  transition: all;
-  duration: 150ms;
+  transition: all 150ms;
   animation-timing-function: ease-in;
 }
 
