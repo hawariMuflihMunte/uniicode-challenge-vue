@@ -30,16 +30,11 @@ details summary {
   font-family: 'Source Code Pro', monospace;
 }
 
-/* material-symbols config */
-.material-symbols-sharp {
-  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 200, 'opsz' 48;
-}
-/* end */
-
 /* custom */
 .button-uniicode {
   --min-width: 30px;
   --min-height: calc(var(--min-width) + 10px);
+
   overflow: hidden;
   -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
   clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
@@ -51,19 +46,17 @@ details summary {
   place-items: center;
   min-width: var(--min-width);
   min-height: var(--min-height);
-  @apply m-1;
-  @apply p-3;
-  @apply bg-uniicode-black;
-  @apply text-slate-200;
-  @apply duration-700;
-
+  margin: 0.25rem;
+  padding: 0.75rem;
+  background-color: #03090E;
+  color: #CBD5E0;
+  animation: blink-hexagon 1000ms alternate infinite paused both;
   box-shadow: 0 0 8px white;
-  animation: blink-hexagon-variant-1 1000ms alternate infinite paused both;
 }
 
 .button-uniicode:hover,
 .button-uniicode:focus {
-  @apply bg-uniicode-dark;
+  background-color: #191F32;
   animation-play-state: running;
 }
 
@@ -74,19 +67,19 @@ details summary {
   transform: rotateZ(30deg);
   width: 100%;
   height: 100%;
-  @apply border-t-8;
-  @apply border-t-uniicode-green;
-  @apply border-b-8;
-  @apply border-b-uniicode-green;
-  @apply transition-all;
+  border-top: 8px solid transparent;
+  border-top-color: #B8FA00;
+  border-bottom: 8px solid transparent;
+  border-bottom-color: #B8FA00;
+  transition: all;
 }
 
 .button-uniicode:hover::before,
 .button-uniicode:focus::before {
-  animation: spin-hexagon-variant-1 300ms linear 1 both;
+  animation: spin-hexagon 300ms linear 1 both;
 }
 
-@keyframes spin-hexagon-variant-1 {
+@keyframes spin-hexagon {
   100% {
     --tw-border-opacity: 1;
     filter: drop-shadow(0 0 10px rgb(184 250 0 / var(--tw-border-opacity)));
@@ -95,7 +88,7 @@ details summary {
   }
 }
 
-@keyframes blink-hexagon-variant-1 {
+@keyframes blink-hexagon {
   to {
     transform: scale(1.01) translateY(10px);
   }
@@ -115,10 +108,9 @@ details summary {
   max-width: 20%;
   z-index: 20;
   margin-bottom: 50px;
-
-  @apply transition-all;
-  @apply duration-150;
-  @apply ease-in;
+  transition: all;
+  duration: 150ms;
+  animation-timing-function: ease-in;
 }
 
 .profile-image-uniicode:hover,
@@ -127,9 +119,8 @@ details summary {
 }
 
 .profile-details-uniicode {
-  @apply bg-transparent;
-  @apply p-3;
-
+  background-color: transparent;
+  padding: 0.75rem;
   display: none;
   opacity: 0;
   min-width: 80%;
@@ -142,13 +133,12 @@ details summary {
 
 @media screen and (max-width: 576px) {
   .profile-details-uniicode {
-    @apply pl-8
+    padding-left: 2rem;
   }
 }
 
 .profile-details-uniicode *::selection {
-  @apply text-uniicode-dark;
-
+  color: #191F32;
   background: #B8FA00;
   border-radius: 8px;
 }
@@ -190,25 +180,25 @@ details summary {
 }
 
 @keyframes profile-slide-left {
-	0% {
-		opacity: 0;
-		transform: translateX(-250px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes profile-slide-right {
-	0% {
-		opacity: 0;
-		transform: translateX(250px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 0;
+    transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .profile-fade-right {
@@ -220,29 +210,28 @@ details summary {
 }
 
 @keyframes profile-fade-right {
-	0% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
-	100% {
+  100% {
     display: none;
-		opacity: 0;
-		transform: translateX(50px);
-	}
+    opacity: 0;
+    transform: translateX(50px);
+  }
 }
 
 @keyframes profile-fade-left {
-	0% {
-		opacity: 1;
-		transform: translateX(0);
-	}
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
-	100% {
+  100% {
     display: none;
-		opacity: 0;
-		transform: translateX(-50px);
-	}
+    opacity: 0;
+    transform: translateX(-50px);
+  }
 }
-
 /* end */
