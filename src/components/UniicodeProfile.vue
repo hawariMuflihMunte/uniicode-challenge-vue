@@ -181,7 +181,7 @@ const showProfileDetails = (): void => {
     <section
       class="profile-image-uniicode"
       @click="showProfileDetails"
-      title="Double click to view details. Click once to close details"
+      title="Click to toggle details"
     >
       <span class="hint--bottom hint--no-arrow" :aria-label="name">
         <img
