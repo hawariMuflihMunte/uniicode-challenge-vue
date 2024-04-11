@@ -8,6 +8,7 @@ import rezaImg from '@/assets/images/person/reza.jpg'
 import avisImg from '@/assets/images/person/avis.jpg'
 import dimasImg from '@/assets/images/person/dimas.jpg'
 import iqbalAMImg from '@/assets/images/person/iqbalAM.jpg'
+import Asai from '@/assets/images/person/asai.jpg'
 
 const personStats = [
   {
@@ -135,6 +136,26 @@ const personStats = [
       'php',
       'python',
       'tailwindcss',
+    ]
+  },
+  {
+    name: 'Ahmad Syaifuddin',
+    image: Asai,
+    strength: [
+      'UNIICODE member 🙏🏼',
+    ],
+    weakness: [
+      'Music Sad 🎵'
+    ],
+    techStack: [
+      'html',
+      'css',
+      'javascript',
+      'vue',
+      'php',
+      'python',
+      'cpp',
+      'java',
     ]
   },
 ]
