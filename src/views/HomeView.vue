@@ -142,7 +142,7 @@ const personStats = [
     name: 'Ahmad Syaifuddin',
     image: Asai,
     strength: [
-      'UNIICODE member 🙏🏼',
+      'UNIICODE member',
     ],
     weakness: [
       'Music Sad 🎵'
