@@ -111,6 +111,12 @@ const techStackIcons: Array<{
       name: 'Go',
       icon: 'https://user-images.githubusercontent.com/25181517/192149581-88194d20-1a37-4be8-8801-5dc0017ffbbe.png'
     }
+  },
+  {
+    java: {
+      name: 'Java',
+      icon: 'https://user-images.githubusercontent.com/25181517/117201156-9a724800-adec-11eb-9a9d-3cd0f67da4bc.png'
+    }
   }
 ]
 
